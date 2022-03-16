@@ -2,7 +2,7 @@ import { BrowserRouter, Route , Routes} from "react-router-dom";
 import Home from "./components/app/Home";
 import NavBar from "./components/app/NavBar";
 import AllUsers from "./components/client/AllClients";
-import AddUser from "./components/client/AddUser";
+import AddClient from "./components/client/AddClient";
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home/>} />
         <Route path="/all" exact element={<AllUsers/>} />
-        <Route path="/add" exact element={<AddUser/>} />
+        <Route path="/add" exact element={<AddClient/>} />
+        <Route path="/edit/:id" exact element={<AddClient/>} />
       </Routes>
     </BrowserRouter>
   );
